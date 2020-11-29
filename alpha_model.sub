@@ -1,0 +1,15 @@
+universe = vanilla
+log    =    log/alpha.log
+error  =  error/alpha.err
+output = output/alpha.out
+
+executable = ./alpha_model.sh
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = http://proxy.chtc.wisc.edu/SQUID/chtc/R402.tar.gz,packages.tar.gz,alpha_model.R, alpha_model.sh
+request_cpus = 1
+request_memory = 1GB
+request_disk = 1GB
+
+queue
